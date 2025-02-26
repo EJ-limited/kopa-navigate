@@ -67,6 +67,8 @@ export default function Statedisplay() {
                   className="size-72 py-2 aspect-auto rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105"
                   src={state.img}
                   alt={state.name}
+                  width={100}
+                  height={100}
                 />
                 <div>
                   <hr className="py-2" />

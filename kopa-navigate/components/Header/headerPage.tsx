@@ -76,7 +76,7 @@ export default function HeaderPage() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only text-black ">NYSC </span>
-            <Image alt="" src="img/nysc.png" className="h-8 w-auto" />
+            <Image alt="" src="/img/nysc.png" className="h-8 w-auto" width={32} height={32} />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -170,7 +170,13 @@ export default function HeaderPage() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <Image alt="" src="img/nysc.png" className="h-8 w-auto" />
+              <Image
+                alt=""
+                src="img/nysc.png"
+                className="h-8 w-auto"
+                width={100}
+                height={100}
+              />
             </a>
             <button
               type="button"
