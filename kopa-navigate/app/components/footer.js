@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="bg-green-600 text-white py-6">
+    <footer className="bg-[#204f0f] text-white py-6">
       <div className="container mx-auto text-sm leading-5 text-center py-4 px-6 space-y-3">
         <p className="text-center">
           &copy; {new Date().getFullYear()}

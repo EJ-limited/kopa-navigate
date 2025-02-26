@@ -32,11 +32,11 @@ const hero = () =>
     <div>
 
 <section className="bg-[#204f0f]">
-    <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+    <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16  lg:px-12">
    
         <h1 className="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">FIND YOUR SECRETARIAT NOW</h1>
 
-        <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-2">
         <PopoverGroup className=" flex flex-col items-center justify-center lg:flex-row lg:gap-x-12">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1  text-sm/6 font-semibold text-white">
@@ -46,7 +46,8 @@ const hero = () =>
 
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full right-1 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white ring-1 shadow-lg ring-gray-900/5 transition
+               data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {products.map((item) => (
