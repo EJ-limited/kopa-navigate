@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 
 const states = [
   {
@@ -63,8 +63,8 @@ export default function Statedisplay() {
           {states.map((state) => (
             <li key={state.name}>
               <div className="flex items-center border-slate-500 border-solid contents gap-x-6 w-1/4">
-                <img
-                  className="size-96 py-2 aspect-auto rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105"
+                <Image
+                  className="size-72 py-2 aspect-auto rounded-3xl transition-transform duration-300 ease-in-out transform hover:scale-105"
                   src={state.img}
                   alt={state.name}
                 />

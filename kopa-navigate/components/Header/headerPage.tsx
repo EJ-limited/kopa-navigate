@@ -1,6 +1,5 @@
-'use client'
-
-import { useState } from 'react'
+"use client";
+import { useState } from "react";
 import {
   Dialog,
   DialogPanel,
@@ -11,7 +10,7 @@ import {
   PopoverButton,
   PopoverGroup,
   PopoverPanel,
-} from '@headlessui/react'
+} from "@headlessui/react";
 import {
   ArrowPathIcon,
   Bars3Icon,
@@ -20,36 +19,64 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+} from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
+import Image from "next/image";
 
 const products = [
-  { name: 'Abuja (FCT)', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Lagos State ', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Kogi State', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Osun State', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Nassarawa State', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
+  {
+    name: "Abuja (FCT)",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+  {
+    name: "Lagos State ",
+    description: "Speak directly to your customers",
+    href: "#",
+    icon: CursorArrowRaysIcon,
+  },
+  {
+    name: "Kogi State",
+    description: "Your customers’ data will be safe and secure",
+    href: "#",
+    icon: FingerPrintIcon,
+  },
+  {
+    name: "Osun State",
+    description: "Connect with third-party tools",
+    href: "#",
+    icon: SquaresPlusIcon,
+  },
+  {
+    name: "Nassarawa State",
+    description: "Build strategic funnels that will convert",
+    href: "#",
+    icon: ArrowPathIcon,
+  },
+];
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact s', href: '#', icon: PhoneIcon },
-]
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact s", href: "#", icon: PhoneIcon },
+];
 
-export default function  HeaderPage() {
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+export default function HeaderPage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only text-black ">NYSC </span>
-            <img
-              alt=""
-              src="img/nysc.png"
-              className="h-8 w-auto"
-            />
+            <Image alt="" src="img/nysc.png" className="h-8 w-auto" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -66,7 +93,10 @@ export default function  HeaderPage() {
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900">
               Select State
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-400" />
+              <ChevronDownIcon
+                aria-hidden="true"
+                className="size-5 flex-none text-gray-400"
+              />
             </PopoverButton>
 
             <PopoverPanel
@@ -80,10 +110,16 @@ export default function  HeaderPage() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-600 group-hover:text-indigo-600" />
+                      <item.icon
+                        aria-hidden="true"
+                        className="size-6 text-gray-600 group-hover:text-indigo-600"
+                      />
                     </div>
                     <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-gray-900">
+                      <a
+                        href={item.href}
+                        className="block font-semibold text-gray-900"
+                      >
                         {item.name}
                         <span className="absolute inset-0" />
                       </a>
@@ -99,7 +135,10 @@ export default function  HeaderPage() {
                     href={item.href}
                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm/6 font-semibold text-gray-900 hover:bg-gray-100"
                   >
-                    <item.icon aria-hidden="true" className="size-5 flex-none text-gray-400" />
+                    <item.icon
+                      aria-hidden="true"
+                      className="size-5 flex-none text-gray-400"
+                    />
                     {item.name}
                   </a>
                 ))}
@@ -111,11 +150,9 @@ export default function  HeaderPage() {
             Home
           </a>
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            About 
+            About
           </a>
-          <a href="#" className="text-sm/6 font-semibold text-gray-900">
-            
-          </a>
+          <a href="#" className="text-sm/6 font-semibold text-gray-900"></a>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" className="text-sm/6 font-semibold text-gray-900">
@@ -123,17 +160,17 @@ export default function  HeaderPage() {
           </a>
         </div>
       </nav>
-      <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
-                alt=""
-                src="img/nysc.png"
-                className="h-8 w-auto"
-              />
+              <Image alt="" src="img/nysc.png" className="h-8 w-auto" />
             </a>
             <button
               type="button"
@@ -149,7 +186,11 @@ export default function  HeaderPage() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
-                    Select State                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
+                    Select State{" "}
+                    <ChevronDownIcon
+                      aria-hidden="true"
+                      className="size-5 flex-none group-data-open:rotate-180"
+                    />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...products, ...callsToAction].map((item) => (
@@ -174,15 +215,13 @@ export default function  HeaderPage() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                 About Us
+                  About Us
                 </a>
-               
               </div>
-          
             </div>
           </div>
         </DialogPanel>
       </Dialog>
     </header>
-  )
+  );
 }
